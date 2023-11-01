@@ -1,0 +1,235 @@
+/* General Coloring */
+:root {
+    --lightblack-background: #121213;
+    --black-nav-background: #000000;
+    --grey-text: #b3b3b3;
+    --white-text: #ffffff;
+    --black-card-background: #161616;
+    --signup-btn-text: #508dd8;
+  }
+  body{
+    background-color: var(--black-nav-background);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+  }
+  
+  /* Headers, p and button coloring and styling */
+  h2, h3{
+    color: var(--white-text);
+  }
+  h4, p{
+    color: var(--grey-text);
+  }
+  h4{
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .btn{
+    border: 2px solid transparent;
+    border-radius: 500px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.76px;
+    line-height: 18px;
+    padding: 8px 34px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 33ms cubic-bezier(.3,0,0,1);
+    white-space: nowrap;
+    will-change: transform;
+  }
+  /* Grid set up for page */
+  .root_container{
+    display: grid;
+    grid-template-areas: "nav-bar main-container-grid" "bottom-banner bottom-banner";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+  }
+  /* Top bar of main container with arrow buttons and login and sign up buttons */
+  .top-bar{
+    grid-area: main-container-grid;
+    justify-content: space-between;
+    height: 64px;
+    min-width: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,.5);
+    position: sticky;
+    top: 0;
+  }
+  header{
+    display: flex;
+    position: relative;
+    width: 94%;
+    height: 64px;
+    max-width: calc(100vw - var(--nav-bar-width));
+    justify-content: space-between;
+    align-content: center;
+    z-index: 3;
+    padding: 16px 32px;
+  }
+  .top-left{
+    display: flex;
+  }
+  .top-left img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  #top-signup-btn{
+    color: var(--white-text);
+    background-color: var(--black-nav-background);
+  }
+  #top-login-btn{
+    color: var(--black-nav-background);
+  }
+  /* Side Nav bar panel */
+  .nav-bar{
+    background-color: var(--black-nav-background);
+    color: var(--grey-text);
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    position: sticky;
+    top: 0;
+  }
+  .logo img{
+    width: 241px;
+  }
+  .side-panel ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+  }
+  .side-panel li{
+    display: flex;
+    list-style: none;
+    line-height: 1.5em;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    gap: 1em;
+  }
+  .side-panel a{
+    color: var(--grey-text);
+    text-decoration: none;
+    padding: 10px 0px;
+  }
+  .side-panel a:hover{
+    color: var(--white-text);
+  }
+  .side-panel li img{
+    width: 40px;
+    height: 35px;
+  }
+  #third-banner-list{
+    margin-top: 145px;
+    font-size: 10px;
+  }
+  #third-banner-list li{
+    font-size: 10px;
+    line-height: 0;
+  }
+  #third-banner-list li:hover{
+    text-decoration: underline;
+  }
+  /* Main container with album sections */
+  .main-container-grid{
+    background-color: var(--lightblack-background);
+    display: flex;
+    grid-area: main-container-grid;
+    width: 100%;
+    flex-direction: column;
+  }
+  main{
+    display: grid;
+    grid-gap: 24px;
+    padding: 70px 32px 70px 32px;
+    margin: 0;
+    border: 0;
+  }
+  .grid-title{
+    display: flex;
+    align-items: flex-end;
+  
+  }
+
+  .grid-images{
+    width: 100px;
+    height: 150px;
+  }
+  .grid-title h2{
+    flex-grow: 1;
+    min-width: 0;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1em;
+  }
+  .album-grid-sections{
+    background-color: var(--black-card-background);
+    padding: 20px;
+    border-radius: 2px;
+  }
+  .album-grid-sections img{
+    border-radius: 2px;
+    width: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .album-grid-sections p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+  }
+  
+  /* Bottom Gradient Banner with Sign Up */
+  .bottom-banner{
+    grid-area: bottom-banner;
+    width: 98%;
+    z-index: 4;
+    position: sticky;
+    bottom: 0;
+  }
+  .bottom-banner p, h5{
+    color: var(--white-text);
+    margin-left: 24px;
+  }
+  .bottom-banner p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .bottom-banner h5{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .signup-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    background-image: linear-gradient(90deg,#af2896,#509bf5);
+    align-items: center;
+    padding: 11px 24px 7px 15px;
+    margin: 0;
+  }
+  #bottom-signup-btn{
+    color: var(--signup-btn-text);
+  }
